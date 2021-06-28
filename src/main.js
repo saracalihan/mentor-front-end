@@ -1,28 +1,29 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import Datatable from 'vue2-datatable-component'
-import vuetify from '@/plugins/vuetify' // path to vuetify export
-import './styles/main.scss'
-import 'bootstrap/dist/js/bootstrap.bundle.js'
-import './vee-validate'
-import '@fortawesome/fontawesome-free/css/all.css'
-import '@fortawesome/fontawesome-free/js/all.js'
-import Notifications from 'vue-notification'
 import Gravatar from 'vue-gravatar'
-import HomeNav from '@/views/Layouts/HomeNav'
-import None from '@/views/Layouts/None'
 import { configure } from 'vee-validate'
+import Notifications from 'vue-notification'
+import Datatable from 'vue2-datatable-component'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import '@fortawesome/fontawesome-free/js/all.js'
+import '@fortawesome/fontawesome-free/css/all.css'
 
-Vue.component('home-nav-layout', HomeNav)
+import './vee-validate'
+import App from './App.vue'
+import './styles/main.scss'
+import router from './router'
+import vuetify from '@/plugins/vuetify' // path to vuetify export
+import None from '@/views/Layouts/None'
+import HomeNav from '@/views/Layouts/HomeNav'
+
 Vue.component('none-layout', None)
-
 Vue.component('v-gravatar', Gravatar)
+Vue.component('home-nav-layout', HomeNav)
 
 Vue.config.productionTip = false
 
-Vue.use(Notifications)
 Vue.use(Datatable)
+Vue.use(Notifications)
+
 new Vue({
   router,
   vuetify,
